@@ -1,6 +1,6 @@
 # 🏍️ Detecção de Motos com YOLOv5 + OpenCV
 
-Este projeto utiliza **visão computacional** com **YOLOv5** e **OpenCV** para detectar motos em um vídeo de forma automática e marcar aquelas que estão “prontas para uso” com um retângulo verde.
+Este projeto utiliza **visão computacional** com **YOLOv5** e **OpenCV** para detectar motos em imagens e vídeos. O objetivo é organizar o pátio da empresa identificando o status de cada moto: **pronta para uso**, **em revisão**, **reservada**.
 
 ---
 ## 🔍 O que o código faz?
@@ -20,6 +20,16 @@ Este projeto utiliza **visão computacional** com **YOLOv5** e **OpenCV** para d
 | **PyTorch** (`torch`) | Framework de machine learning usado para carregar o modelo YOLOv5. |
 | **YOLOv5** | Modelo pré-treinado de detecção de objetos em tempo real. |
 | **Ultralytics Hub** | Permite baixar modelos YOLOv5 diretamente via PyTorch Hub. |
+
+---
+O projeto conta com **3 scripts principais**:
+| Arquivo | Tipo de entrada | Finalidade |
+|--------|------------------|------------|
+| `detectar_motos_simples.py` | 🎥 Vídeo | Detecta motos e marca como “pronta” com retângulo verde |
+| `detectar_motos_2.py` | 🎥 Vídeo | Detecta motos e marca como "em revisão" com retângulos amarelos |
+| `detectar_imagens.py` | 🖼️ Imagem | Detecta motos em uma imagem estática e amarca como "reservada" com retângulos azuis |
+
+Cada um pode ser usado separadamente dependendo da sua fonte de entrada e objetivo.
 
 ---
 
@@ -51,6 +61,20 @@ pip install torch torchvision opencv-python
 
 **Execute o script**
 ```bash
-python detectar_motos.py
+python detectar_motos_simples.py
 ```
-**🔴 Para encerrar o vídeo a qualquer momento, pressione a tecla Q.**
+para ver motos detectadas como "pronta";
+
+**Execute o script**
+```bash
+python detectar_motos_2.py
+```
+para ver motos detectadas como "em revisão";
+
+**Execute o script**
+```bash
+python detectar_imagens.py
+```
+para ver motos detectadas em uma imagem como "reservado".
+
+### **🔴 Para encerrar o vídeo a qualquer momento, pressione a tecla Q.**
