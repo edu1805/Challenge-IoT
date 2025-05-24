@@ -1,6 +1,11 @@
-# 🏍️ Detecção de Motos com YOLOv5 + OpenCV
+# 🏍️ Motomap - Detecção de Motos
 
-Este projeto utiliza **visão computacional** com **YOLOv5** e **OpenCV** para detectar motos em imagens e vídeos. O objetivo é organizar o pátio da empresa identificando o status de cada moto: **pronta para uso**, **em revisão**, **reservada**.
+### Este projeto utiliza **visão computacional** com **YOLOv5** e **OpenCV** para detectar motos em imagens e vídeos. O objetivo é organizar o pátio da empresa identificando o status de cada moto: **pronta para uso**, **em revisão**, **reservada**.
+---
+### **Integrantes**
+- Eduardo do Nascimento Barriviera - **RM555309**
+- Thiago Lima de Freitas - **RM556795**
+- Bruno centurion Fernandes - **RM556531**
 
 ---
 ## 🔍 O que o código faz?
@@ -54,6 +59,9 @@ cd seu-repositorio
 
 ```bash
 pip install torch torchvision opencv-python
+```
+```bash
+pip install requests
 ```
 ---
 
